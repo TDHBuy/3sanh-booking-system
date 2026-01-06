@@ -6,7 +6,6 @@ import 'package:client_web/views/widgets/reservations/notification_badge.dart';
 import 'package:client_web/views/widgets/reservations/notification_panel.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 import 'package:go_router/go_router.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -147,13 +146,13 @@ class _Sidebar extends StatelessWidget {
         false,
         true,
       ), // Chỉ Admin
-      (
-        'settings',
-        Icons.settings_outlined,
-        'Settings',
-        false,
-        true,
-      ), // Chỉ Admin
+      // (
+      //   'settings',
+      //   Icons.settings_outlined,
+      //   'Settings',
+      //   false,
+      //   true,
+      // ), // Chỉ Admin
       ('users', Icons.people_outline, 'Users', false, true), // Chỉ Admin
     ];
 

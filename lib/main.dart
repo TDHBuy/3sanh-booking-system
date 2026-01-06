@@ -25,7 +25,6 @@ import 'firebase_options.dart';
 import 'menu_page.dart';
 import 'order_page.dart';
 import 'booking_page.dart';
-import 'admin_page.dart';
 import 'pages/admin/dashboard_page.dart';
 
 Future<void> main() async {

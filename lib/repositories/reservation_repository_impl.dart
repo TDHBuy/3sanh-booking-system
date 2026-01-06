@@ -104,7 +104,7 @@ class ReservationRepositoryImplement implements ReservationRepository {
   ) async {
     // TODO: implement updateReservation
     try {
-      final docRef = await _firestore.collection(_collection).doc(id);
+      final docRef = _firestore.collection(_collection).doc(id);
       // Check if document exists
       final docSnapshot = await docRef.get();
       if (!docSnapshot.exists) {
@@ -139,7 +139,6 @@ class ReservationRepositoryImplement implements ReservationRepository {
     final now = Timestamp.now();
     return _firestore
         .collection(_collection)
-        .where('createdAt', isGreaterThan: now)
         .orderBy('createdAt', descending: true)
         .limit(20)
         .snapshots();
