@@ -16,7 +16,11 @@ class OrderPage extends StatefulWidget {
 }
 
 class _OrderPageState extends State<OrderPage> {
-  final money = NumberFormat.currency(locale: 'vi_VN', symbol: '', decimalDigits: 0);
+  final money = NumberFormat.currency(
+    locale: 'vi_VN',
+    symbol: '',
+    decimalDigits: 0,
+  );
 
   int _cartCount = 0;
 
@@ -29,43 +33,119 @@ class _OrderPageState extends State<OrderPage> {
   final Map<String, List<_OrderItem>> catalog = {
     'Miền Bắc': [
       _OrderItem('Bò kéo pháo', 169000, 'assets/dishes/bo_keo_phao_1.png'),
-      _OrderItem('Đậu hũ trứng 3 Sành', 99000, 'assets/dishes/dau_hu_trung_1.png'),
-      _OrderItem('Cá thác lác rút xương', 139000, 'assets/dishes/ca_thac_lat_rut_xuong_1.png'),
-      _OrderItem('Nọng đặc vụ mắm tỏi', 159000, 'assets/dishes/nong_dac_vu_mam_toi_1.png'),
+      _OrderItem(
+        'Đậu hũ trứng 3 Sành',
+        99000,
+        'assets/dishes/dau_hu_trung_1.png',
+      ),
+      _OrderItem(
+        'Cá thác lác rút xương',
+        139000,
+        'assets/dishes/ca_thac_lat_rut_xuong_1.png',
+      ),
+      _OrderItem(
+        'Nọng đặc vụ mắm tỏi',
+        159000,
+        'assets/dishes/nong_dac_vu_mam_toi_1.png',
+      ),
     ],
     'Miền Trung': [
-      _OrderItem('Cá dìa nướng muối', 159000, 'assets/dishes/ca_dia_nuong_muoi_1.png'),
-      _OrderItem('Hột vịt lộn om bầu', 129000, 'assets/dishes/hot_vit_lon_om_bau_1.png'),
-      _OrderItem('Lẩu gà ớt hiểm (nhỏ)', 199000, 'assets/dishes/lau_ga_ot_hiem_1.png'),
+      _OrderItem(
+        'Cá dìa nướng muối',
+        159000,
+        'assets/dishes/ca_dia_nuong_muoi_1.png',
+      ),
+      _OrderItem(
+        'Hột vịt lộn om bầu',
+        129000,
+        'assets/dishes/hot_vit_lon_om_bau_1.png',
+      ),
+      _OrderItem(
+        'Lẩu gà ớt hiểm (nhỏ)',
+        199000,
+        'assets/dishes/lau_ga_ot_hiem_1.png',
+      ),
     ],
     'Miền Nam': [
-      _OrderItem('Tôm xông cay Tiền lửa', 169000, 'assets/dishes/tom_xong_cay_tien_lua_mien_nam_1.png'),
-      _OrderItem('Chân gà sốt Thái', 99000, 'assets/dishes/chan_ga_sot_thai_1.png'),
+      _OrderItem(
+        'Tôm xông cay Tiền lửa',
+        169000,
+        'assets/dishes/tom_xong_cay_tien_lua_mien_nam_1.png',
+      ),
+      _OrderItem(
+        'Chân gà sốt Thái',
+        99000,
+        'assets/dishes/chan_ga_sot_thai_1.png',
+      ),
       _OrderItem('Mực sốt Thái', 169000, 'assets/dishes/muc_sot_thai_1.png'),
     ],
     'Đặc sản': [
-      _OrderItem('Khoai mạt nướng sốt 3 Sành', 79000, 'assets/dishes/khoai_mat_nuong_sot_3_sanh_1.png'),
-      _OrderItem('Sụn gà muối tuyết', 119000, 'assets/dishes/sun_ga_muoi_tuyet_1.png'),
-      _OrderItem('Khoai môn du kích', 119000, 'assets/dishes/khoai_mon_du_kich_1.png'),
-      _OrderItem('Tóp mỡ mắm tỏi', 129000, 'assets/dishes/top_mo_mam_toi_1.png'),
+      _OrderItem(
+        'Khoai mạt nướng sốt 3 Sành',
+        79000,
+        'assets/dishes/khoai_mat_nuong_sot_3_sanh_1.png',
+      ),
+      _OrderItem(
+        'Sụn gà muối tuyết',
+        119000,
+        'assets/dishes/sun_ga_muoi_tuyet_1.png',
+      ),
+      _OrderItem(
+        'Khoai môn du kích',
+        119000,
+        'assets/dishes/khoai_mon_du_kich_1.png',
+      ),
+      _OrderItem(
+        'Tóp mỡ mắm tỏi',
+        129000,
+        'assets/dishes/top_mo_mam_toi_1.png',
+      ),
     ],
     'Món chính & Cơm/Mì': [
-      _OrderItem('Cơm ghẹ phủ trứng', 149000, 'assets/dishes/com_ghe_phu_trung_1.png'),
-      _OrderItem('Mì xào Hợp Tác Xã', 119000, 'assets/dishes/mi_xao_hop_tac_xa_1.png'),
+      _OrderItem(
+        'Cơm ghẹ phủ trứng',
+        149000,
+        'assets/dishes/com_ghe_phu_trung_1.png',
+      ),
+      _OrderItem(
+        'Mì xào Hợp Tác Xã',
+        119000,
+        'assets/dishes/mi_xao_hop_tac_xa_1.png',
+      ),
       _OrderItem('Bò măng tây', 179000, 'assets/dishes/bo_mang_tay_1.png'),
     ],
     'Canh - Lẩu': [
       // ĐÃ ĐỔI THEO YÊU CẦU
       _OrderItem('Nghêu nấu khế', 99000, 'assets/dishes/ngheu_nau_khe_1.png'),
-      _OrderItem('Lẩu gà ớt hiểm', 249000, 'assets/dishes/lau_ga_ot_hiem_1.png'),
+      _OrderItem(
+        'Lẩu gà ớt hiểm',
+        249000,
+        'assets/dishes/lau_ga_ot_hiem_1.png',
+      ),
     ],
     'Hải sản - Nướng': [
-      _OrderItem('Tôm nướng sốt 3 Sành', 159000, 'assets/dishes/tom_nuong_1.png'),
-      _OrderItem('Cá dìa nướng muối', 159000, 'assets/dishes/ca_dia_nuong_muoi_1.png'),
-      _OrderItem('Nạc nọng nướng', 159000, 'assets/dishes/nat_nong_nuong_1.png'),
+      _OrderItem(
+        'Tôm nướng sốt 3 Sành',
+        159000,
+        'assets/dishes/tom_nuong_1.png',
+      ),
+      _OrderItem(
+        'Cá dìa nướng muối',
+        159000,
+        'assets/dishes/ca_dia_nuong_muoi_1.png',
+      ),
+      _OrderItem(
+        'Nạc nọng nướng',
+        159000,
+        'assets/dishes/nat_nong_nuong_1.png',
+      ),
     ],
     'Ốc - Hải sản nóng': [
-      _OrderItem('Ốc bươu hấp tiêu', 99000, 'assets/dishes/oc_buou_hap_tieu_1.png'),
+      _OrderItem(
+        'Ốc bươu hấp tiêu',
+        99000,
+        'assets/dishes/oc_buou_hap_tieu_1.png',
+      ),
     ],
     'Khô - Mắm - Nướng': [
       _OrderItem('Khô cá dứa', 79000, 'assets/dishes/kho_ca_dua_1.png'),
@@ -96,8 +176,12 @@ class _OrderPageState extends State<OrderPage> {
 
   Future<void> _loadInvoiceFonts() async {
     try {
-      _fontRegular = pw.Font.ttf(await rootBundle.load('assets/fonts/NotoSans-Regular.ttf'));
-      _fontBold = pw.Font.ttf(await rootBundle.load('assets/fonts/NotoSans-Bold.ttf'));
+      _fontRegular = pw.Font.ttf(
+        await rootBundle.load('assets/fonts/NotoSans-Regular.ttf'),
+      );
+      _fontBold = pw.Font.ttf(
+        await rootBundle.load('assets/fonts/NotoSans-Bold.ttf'),
+      );
       setState(() => _fontsReady = true);
     } catch (_) {
       // nếu thiếu font vẫn cho in với font mặc định (có thể lỗi dấu)
@@ -109,7 +193,11 @@ class _OrderPageState extends State<OrderPage> {
   Future<void> _exportInvoicePdf(BuildContext context) async {
     if (_cart.isEmpty) {
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('Giỏ hàng trống – hãy thêm món trước khi xuất hóa đơn.')),
+        const SnackBar(
+          content: Text(
+            'Giỏ hàng trống – hãy thêm món trước khi xuất hóa đơn.',
+          ),
+        ),
       );
       return;
     }
@@ -143,23 +231,40 @@ class _OrderPageState extends State<OrderPage> {
               mainAxisAlignment: pw.MainAxisAlignment.spaceBetween,
               crossAxisAlignment: pw.CrossAxisAlignment.end,
               children: [
-                pw.Text('IN LẠI - HÓA ĐƠN THANH TOÁN',
-                    style: pw.TextStyle(fontWeight: pw.FontWeight.bold, fontSize: 10)),
-                pw.Text('Số HĐ: $invoiceNo', style: const pw.TextStyle(fontSize: 9)),
+                pw.Text(
+                  'IN LẠI - HÓA ĐƠN THANH TOÁN',
+                  style: pw.TextStyle(
+                    fontWeight: pw.FontWeight.bold,
+                    fontSize: 10,
+                  ),
+                ),
+                pw.Text(
+                  'Số HĐ: $invoiceNo',
+                  style: const pw.TextStyle(fontSize: 9),
+                ),
               ],
             ),
             pw.SizedBox(height: 4),
             pw.Row(
               mainAxisAlignment: pw.MainAxisAlignment.spaceBetween,
               children: [
-                pw.Text('Bàn: Bàn 13 - NGOÀI', style: const pw.TextStyle(fontSize: 9)),
-                pw.Text('Thu ngân: NV01', style: const pw.TextStyle(fontSize: 9)),
+                pw.Text(
+                  'Bàn: Bàn 13 - NGOÀI',
+                  style: const pw.TextStyle(fontSize: 9),
+                ),
+                pw.Text(
+                  'Thu ngân: NV01',
+                  style: const pw.TextStyle(fontSize: 9),
+                ),
               ],
             ),
             pw.Row(
               mainAxisAlignment: pw.MainAxisAlignment.spaceBetween,
               children: [
-                pw.Text('Giờ vào: $dateStr', style: const pw.TextStyle(fontSize: 9)),
+                pw.Text(
+                  'Giờ vào: $dateStr',
+                  style: const pw.TextStyle(fontSize: 9),
+                ),
                 pw.SizedBox(),
               ],
             ),
@@ -180,8 +285,13 @@ class _OrderPageState extends State<OrderPage> {
                   money.format(line.qty * line.item.price),
                 ];
               }).toList(),
-              headerStyle: pw.TextStyle(fontWeight: pw.FontWeight.bold, fontSize: 9),
-              headerDecoration: const pw.BoxDecoration(color: PdfColors.grey300),
+              headerStyle: pw.TextStyle(
+                fontWeight: pw.FontWeight.bold,
+                fontSize: 9,
+              ),
+              headerDecoration: const pw.BoxDecoration(
+                color: PdfColors.grey300,
+              ),
               cellStyle: const pw.TextStyle(fontSize: 9),
               columnWidths: {
                 0: const pw.FixedColumnWidth(20), // STT
@@ -198,27 +308,51 @@ class _OrderPageState extends State<OrderPage> {
                 4: pw.Alignment.centerRight,
               },
               border: pw.TableBorder.all(width: 0.5),
-              headerPadding: const pw.EdgeInsets.symmetric(vertical: 4, horizontal: 4),
-              cellPadding: const pw.EdgeInsets.symmetric(vertical: 3, horizontal: 4),
+              headerPadding: const pw.EdgeInsets.symmetric(
+                vertical: 4,
+                horizontal: 4,
+              ),
+              cellPadding: const pw.EdgeInsets.symmetric(
+                vertical: 3,
+                horizontal: 4,
+              ),
             ),
 
             pw.SizedBox(height: 6),
             pw.Row(
               mainAxisAlignment: pw.MainAxisAlignment.end,
               children: [
-                pw.Text('Tổng cộng: ',
-                    style: pw.TextStyle(fontWeight: pw.FontWeight.bold, fontSize: 10)),
-                pw.Text('${money.format(_total)} đ',
-                    style: pw.TextStyle(fontWeight: pw.FontWeight.bold, fontSize: 10)),
+                pw.Text(
+                  'Tổng cộng: ',
+                  style: pw.TextStyle(
+                    fontWeight: pw.FontWeight.bold,
+                    fontSize: 10,
+                  ),
+                ),
+                pw.Text(
+                  '${money.format(_total)} đ',
+                  style: pw.TextStyle(
+                    fontWeight: pw.FontWeight.bold,
+                    fontSize: 10,
+                  ),
+                ),
               ],
             ),
             pw.SizedBox(height: 8),
-            pw.Text('Ghi chú: Booking qua app', style: const pw.TextStyle(fontSize: 9)),
+            pw.Text(
+              'Ghi chú: Booking qua app',
+              style: const pw.TextStyle(fontSize: 9),
+            ),
             pw.SizedBox(height: 16),
             pw.Align(
               alignment: pw.Alignment.center,
-              child: pw.Text('Cảm ơn Quý Khách!',
-                  style: pw.TextStyle(fontWeight: pw.FontWeight.bold, fontSize: 10)),
+              child: pw.Text(
+                'Cảm ơn Quý Khách!',
+                style: pw.TextStyle(
+                  fontWeight: pw.FontWeight.bold,
+                  fontSize: 10,
+                ),
+              ),
             ),
           ],
         ),
@@ -230,18 +364,25 @@ class _OrderPageState extends State<OrderPage> {
         await Printing.layoutPdf(onLayout: (_) async => bytes);
       } catch (e) {
         // Trình duyệt không hỗ trợ in trực tiếp → tải file
-        await Printing.sharePdf(bytes: bytes, filename: 'hoa_don_$invoiceNo.pdf');
+        await Printing.sharePdf(
+          bytes: bytes,
+          filename: 'hoa_don_$invoiceNo.pdf',
+        );
         if (mounted) {
           ScaffoldMessenger.of(context).showSnackBar(
-            const SnackBar(content: Text('Đã tải PDF do trình duyệt không cho in trực tiếp.')),
+            const SnackBar(
+              content: Text(
+                'Đã tải PDF do trình duyệt không cho in trực tiếp.',
+              ),
+            ),
           );
         }
       }
     } catch (e) {
       if (mounted) {
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text('Không thể xuất hóa đơn: $e')),
-        );
+        ScaffoldMessenger.of(
+          context,
+        ).showSnackBar(SnackBar(content: Text('Không thể xuất hóa đơn: $e')));
       }
     }
   }
@@ -264,12 +405,18 @@ class _OrderPageState extends State<OrderPage> {
               GestureDetector(
                 onTap: () => context.go('/'),
                 child: Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 10,
+                    vertical: 8,
+                  ),
                   decoration: BoxDecoration(
                     color: Colors.amber.shade600,
                     borderRadius: BorderRadius.circular(8),
                   ),
-                  child: const Text('3 SÀNH', style: TextStyle(fontSize: 16, fontWeight: FontWeight.w900)),
+                  child: const Text(
+                    '3 SÀNH',
+                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.w900),
+                  ),
                 ),
               ),
               const SizedBox(width: 24),
@@ -288,16 +435,27 @@ class _OrderPageState extends State<OrderPage> {
                 style: TextButton.styleFrom(
                   foregroundColor: Colors.black,
                   backgroundColor: Colors.amber.shade600,
-                  padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 12),
-                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 18,
+                    vertical: 12,
+                  ),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
+                  ),
                 ),
-                child: const Text('ĐẶT BÀN', style: TextStyle(fontWeight: FontWeight.w700)),
+                child: const Text(
+                  'ĐẶT BÀN',
+                  style: TextStyle(fontWeight: FontWeight.w700),
+                ),
               ),
               const SizedBox(width: 16),
               TextButton.icon(
                 onPressed: () => launchUrl(Uri.parse('tel:0765064777')),
                 icon: const Icon(Icons.call, size: 18, color: Colors.white70),
-                label: const Text('0765 064 777', style: TextStyle(color: Colors.white70)),
+                label: const Text(
+                  '0765 064 777',
+                  style: TextStyle(color: Colors.white70),
+                ),
               ),
             ],
           ),
@@ -333,14 +491,21 @@ class _OrderPageState extends State<OrderPage> {
                 right: -2,
                 top: -2,
                 child: Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 6,
+                    vertical: 2,
+                  ),
                   decoration: const BoxDecoration(
                     color: Colors.red,
                     borderRadius: BorderRadius.all(Radius.circular(12)),
                   ),
                   child: Text(
                     '$_cartCount',
-                    style: const TextStyle(color: Colors.white, fontSize: 12, fontWeight: FontWeight.w700),
+                    style: const TextStyle(
+                      color: Colors.white,
+                      fontSize: 12,
+                      fontWeight: FontWeight.w700,
+                    ),
                   ),
                 ),
               ),
@@ -369,13 +534,32 @@ class _OrderPageState extends State<OrderPage> {
               padding: const EdgeInsets.all(16),
               child: Column(
                 children: [
-                  Container(height: 4, width: 48, decoration: BoxDecoration(color: Colors.white24, borderRadius: BorderRadius.circular(999))),
+                  Container(
+                    height: 4,
+                    width: 48,
+                    decoration: BoxDecoration(
+                      color: Colors.white24,
+                      borderRadius: BorderRadius.circular(999),
+                    ),
+                  ),
                   const SizedBox(height: 12),
-                  const Text('Thanh toán', style: TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.w700)),
+                  const Text(
+                    'Thanh toán',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 18,
+                      fontWeight: FontWeight.w700,
+                    ),
+                  ),
                   const SizedBox(height: 12),
                   Expanded(
                     child: _cart.isEmpty
-                        ? const Center(child: Text('Giỏ hàng trống', style: TextStyle(color: Colors.white54)))
+                        ? const Center(
+                            child: Text(
+                              'Giỏ hàng trống',
+                              style: TextStyle(color: Colors.white54),
+                            ),
+                          )
                         : ListView.builder(
                             controller: controller,
                             itemCount: _cart.length,
@@ -392,33 +576,74 @@ class _OrderPageState extends State<OrderPage> {
                                   children: [
                                     Expanded(
                                       child: Column(
-                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
                                         children: [
-                                          Text(line.item.name, style: const TextStyle(color: Colors.white, fontWeight: FontWeight.w700)),
+                                          Text(
+                                            line.item.name,
+                                            style: const TextStyle(
+                                              color: Colors.white,
+                                              fontWeight: FontWeight.w700,
+                                            ),
+                                          ),
                                           const SizedBox(height: 4),
-                                          Text('${money.format(line.item.price)}đ', style: const TextStyle(color: Colors.white70)),
+                                          Text(
+                                            '${money.format(line.item.price)}đ',
+                                            style: const TextStyle(
+                                              color: Colors.white70,
+                                            ),
+                                          ),
                                         ],
                                       ),
                                     ),
                                     IconButton(
                                       onPressed: () {
                                         if (line.qty > 1) {
-                                          setState(() => _cart[i] = line.copyWith(qty: line.qty - 1));
+                                          setState(
+                                            () => _cart[i] = line.copyWith(
+                                              qty: line.qty - 1,
+                                            ),
+                                          );
                                         } else {
                                           setState(() => _cart.removeAt(i));
                                         }
-                                        setState(() => _cartCount = _cart.fold(0, (s, e) => s + e.qty));
+                                        setState(
+                                          () => _cartCount = _cart.fold(
+                                            0,
+                                            (s, e) => s + e.qty,
+                                          ),
+                                        );
                                       },
-                                      icon: const Icon(Icons.remove_circle_outline, color: Colors.white70),
+                                      icon: const Icon(
+                                        Icons.remove_circle_outline,
+                                        color: Colors.white70,
+                                      ),
                                     ),
-                                    Text('${line.qty}', style: const TextStyle(color: Colors.white)),
+                                    Text(
+                                      '${line.qty}',
+                                      style: const TextStyle(
+                                        color: Colors.white,
+                                      ),
+                                    ),
                                     IconButton(
-                                      onPressed: () => setState(() => _cart[i] = line.copyWith(qty: line.qty + 1)),
-                                      icon: const Icon(Icons.add_circle_outline, color: Colors.white70),
+                                      onPressed: () => setState(
+                                        () => _cart[i] = line.copyWith(
+                                          qty: line.qty + 1,
+                                        ),
+                                      ),
+                                      icon: const Icon(
+                                        Icons.add_circle_outline,
+                                        color: Colors.white70,
+                                      ),
                                     ),
                                     const SizedBox(width: 8),
-                                    Text('${money.format(line.qty * line.item.price)}đ',
-                                        style: const TextStyle(color: Colors.white, fontWeight: FontWeight.w700)),
+                                    Text(
+                                      '${money.format(line.qty * line.item.price)}đ',
+                                      style: const TextStyle(
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.w700,
+                                      ),
+                                    ),
                                   ],
                                 ),
                               );
@@ -429,8 +654,17 @@ class _OrderPageState extends State<OrderPage> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      const Text('Tổng cộng', style: TextStyle(color: Colors.white70)),
-                      Text('${money.format(_total)} đ', style: const TextStyle(color: Colors.white, fontWeight: FontWeight.w800)),
+                      const Text(
+                        'Tổng cộng',
+                        style: TextStyle(color: Colors.white70),
+                      ),
+                      Text(
+                        '${money.format(_total)} đ',
+                        style: const TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.w800,
+                        ),
+                      ),
                     ],
                   ),
                   const SizedBox(height: 12),
@@ -441,18 +675,27 @@ class _OrderPageState extends State<OrderPage> {
                       onPressed: () async {
                         if (_cart.isEmpty) {
                           ScaffoldMessenger.of(context).showSnackBar(
-                            const SnackBar(content: Text('Giỏ hàng trống – hãy thêm món trước khi xuất hóa đơn.')),
+                            const SnackBar(
+                              content: Text(
+                                'Giỏ hàng trống – hãy thêm món trước khi xuất hóa đơn.',
+                              ),
+                            ),
                           );
                           return;
                         }
                         await _exportInvoicePdf(context);
                       },
                       icon: const Icon(Icons.receipt_long),
-                      label: const Text('Thanh toán & Xuất hóa đơn (PDF)', style: TextStyle(fontWeight: FontWeight.w700)),
+                      label: const Text(
+                        'Thanh toán & Xuất hóa đơn (PDF)',
+                        style: TextStyle(fontWeight: FontWeight.w700),
+                      ),
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.amber.shade600,
                         foregroundColor: Colors.black,
-                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(12),
+                        ),
                       ),
                     ),
                   ),
@@ -486,7 +729,12 @@ class _OrderGrid extends StatelessWidget {
   final List<_OrderItem> items;
   final void Function(_OrderItem) onAdd;
   final NumberFormat money;
-  const _OrderGrid({required this.items, required this.onAdd, required this.money, super.key});
+  const _OrderGrid({
+    required this.items,
+    required this.onAdd,
+    required this.money,
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -507,30 +755,40 @@ class _OrderGrid extends StatelessWidget {
         return Card(
           color: const Color(0xFF151515),
           elevation: 0,
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(16),
+          ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               // Ảnh
               AspectRatio(
                 aspectRatio: 4 / 3,
-                child: Stack(children: [
-                  Positioned.fill(
-                    child: ClipRRect(
-                      borderRadius: const BorderRadius.vertical(top: Radius.circular(16)),
-                      child: Image.asset(
-                        it.image,
-                        fit: BoxFit.cover,
-                        errorBuilder: (_, __, ___) => Container(
-                          color: const Color(0xFF202020),
-                          child: const Center(
-                            child: Icon(Icons.image_not_supported, color: Colors.white24, size: 36),
+                child: Stack(
+                  children: [
+                    Positioned.fill(
+                      child: ClipRRect(
+                        borderRadius: const BorderRadius.vertical(
+                          top: Radius.circular(16),
+                        ),
+                        child: Image.asset(
+                          it.image,
+                          fit: BoxFit.cover,
+                          errorBuilder: (_, __, ___) => Container(
+                            color: const Color(0xFF202020),
+                            child: const Center(
+                              child: Icon(
+                                Icons.image_not_supported,
+                                color: Colors.white24,
+                                size: 36,
+                              ),
+                            ),
                           ),
                         ),
                       ),
                     ),
-                  ),
-                ]),
+                  ],
+                ),
               ),
               // Tên + giá
               Padding(
@@ -542,12 +800,18 @@ class _OrderGrid extends StatelessWidget {
                       it.name,
                       maxLines: 2,
                       overflow: TextOverflow.ellipsis,
-                      style: const TextStyle(color: Colors.white, fontWeight: FontWeight.w700),
+                      style: const TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.w700,
+                      ),
                     ),
                     const SizedBox(height: 6),
                     Text(
                       '${money.format(it.price)}đ',
-                      style: const TextStyle(color: Colors.white70, fontWeight: FontWeight.w600),
+                      style: const TextStyle(
+                        color: Colors.white70,
+                        fontWeight: FontWeight.w600,
+                      ),
                     ),
                     const SizedBox(height: 12),
                   ],
@@ -563,14 +827,19 @@ class _OrderGrid extends StatelessWidget {
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.amber.shade600,
                       foregroundColor: Colors.black,
-                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10),
+                      ),
                     ),
                     child: const Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Icon(Icons.add_shopping_cart, size: 18),
                         SizedBox(width: 8),
-                        Text('THÊM VÀO GIỎ', style: TextStyle(fontWeight: FontWeight.w700)),
+                        Text(
+                          'THÊM VÀO GIỎ',
+                          style: TextStyle(fontWeight: FontWeight.w700),
+                        ),
                       ],
                     ),
                   ),
